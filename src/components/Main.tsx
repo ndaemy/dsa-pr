@@ -28,19 +28,21 @@ const departments = [
 
 const Main: FC = () => {
   return (
-    <div className="px-4 md:px-8 py-24">
-      <h1 className="text-4xl text-center font-bold leading-relaxed mb-3">고등부 학생처</h1>
-      <h3 className="text-lg text-center text-neutral-400 font-normal leading-normal mb-12">고등부 학생처는 7개 부서로 이루어져 있습니다.</h3>
+    <div className="flex place-content-center">
+      <div className="w-full max-w-4xl px-4 md:px-8 py-24">
+        <h1 className="text-4xl text-center font-bold leading-relaxed mb-3">고등부 학생처</h1>
+        <h3 className="text-lg text-center text-neutral-400 font-normal leading-normal mb-12">고등부 학생처는 7개 부서로 이루어져 있습니다.</h3>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-        {departments.map(({ name, tags, desc, color }) => (
-          <Department name={name} tags={tags} desc={desc} color={color} />
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {departments.map(({ name, tags, desc, color }) => (
+            <Department name={name} tags={tags} desc={desc} color={color} />
+          ))}
+        </div>
+
+        {/* tailwind build bug fix */}
+        <div className="hidden bg-violet-900"></div>
+        <div className="hidden bg-pink-900"></div>
       </div>
-
-      {/* tailwind build bug fix */}
-      <div className="hidden bg-violet-900"></div>
-      <div className="hidden bg-pink-900"></div>
     </div>
   );
 };
