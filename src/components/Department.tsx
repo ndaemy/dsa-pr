@@ -16,6 +16,7 @@ const Department: FC<Props> = ({ name, tags, desc, color }) => {
     <div className={`${colorName} p-6 rounded-lg w-full h-48 cursor-pointer`}>
       <p className="text-sm font-thin tracking-wider mb-3">
         {tags.map(tag => <span className="mr-1.5">{`#${tag}`}</span>)}
+        {tags.map(tag => <span key={tag} className="mr-1.5">{`#${tag}`}</span>)}
       </p>
       <p className="text-2xl font-bold mb-5">{name}</p>
       <p className="">

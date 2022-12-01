@@ -35,7 +35,7 @@ const Main: FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {departments.map(({ name, tags, desc, color }) => (
-            <Department name={name} tags={tags} desc={desc} color={color} />
+            <Department key={name} name={name} tags={tags} desc={desc} color={color} />
           ))}
         </div>
 
