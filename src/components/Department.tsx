@@ -18,7 +18,10 @@ const Department: FC<Props> = ({ name, tags, desc, color }) => {
   return (
     <div
       className={
-        `relative ${colorName} p-6 rounded-lg w-full h-80 cursor-pointer`
+        classNames(
+    `relative ${colorName} p-6 rounded-lg w-full h-48 md:h-128 lg:h-116 cursor-pointer`,
+          { "h-fit": clicked },
+        )
       }
       onClick={toggleClick}
     >
@@ -28,13 +31,13 @@ const Department: FC<Props> = ({ name, tags, desc, color }) => {
             "text-sm font-thin tracking-wider transition-all duration-300",
             { "mb-3": !clicked },
             { "mb-2": clicked },
-            { "h-5": !clicked },
+            { "h-7": !clicked },
             { "h-0": clicked },
             { "opacity-0": clicked },
           )
         }
       >
-        {tags.map(tag => <span key={tag} className="mr-1.5">{`#${tag}`}</span>)}
+        {tags.map(tag => <span key={tag} className="inline-block mr-1">{`#${tag}`}</span>)}
       </p>
       <p className="text-2xl font-bold mb-5">{name}</p>
       <p
