@@ -40,8 +40,7 @@ const Main: FC = () => {
         </div>
 
         {/* tailwind build bug fix */}
-        <div className="hidden bg-violet-900"></div>
-        <div className="hidden bg-pink-900"></div>
+        <div className="hidden bg-violet-900 bg-pink-900"></div>
       </div>
     </div>
   );
