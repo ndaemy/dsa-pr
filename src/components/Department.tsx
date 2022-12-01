@@ -2,13 +2,9 @@ import classNames from "classnames";
 import { type FC, useState } from "react";
 
 import Magnifier from "../icons/Magnifier";
+import type { Department as TDepartment } from "./Main";
 
-type Props = {
-  name: string;
-  tags: string[];
-  desc: string;
-  color: string;
-}
+type Props = TDepartment;
 
 const Department: FC<Props> = ({ name, tags, desc, color }) => {
   const [clicked, setClicked] = useState(false);
