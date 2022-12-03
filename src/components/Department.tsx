@@ -9,7 +9,7 @@ type Props = TDepartment;
 const Department: FC<Props> = ({ name, tags, desc, color }) => {
   const [clicked, setClicked] = useState(false);
 
-  const colorName = `bg-${color}-900`;
+  const colorName = `bg-${color}-800`;
 
   const toggleClick = () => {
     setClicked(prev => !prev);

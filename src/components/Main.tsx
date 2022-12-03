@@ -121,7 +121,7 @@ const Main: FC = () => {
         </div>
 
         {/* tailwind build bug fix */}
-        <div className="hidden bg-lime-900 bg-emerald-900 bg-cyan-900 bg-blue-900 bg-violet-900 bg-fuchsia-900 bg-pink-900"></div>
+        <div className="hidden bg-lime-800 bg-emerald-800 bg-cyan-800 bg-blue-800 bg-violet-800 bg-fuchsia-800 bg-pink-800"></div>
       </div>
     </div>
   );
