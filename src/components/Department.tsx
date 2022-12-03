@@ -24,7 +24,7 @@ const Department: FC<Props> = ({ name, tags, desc, color }) => {
     >
       <p
         className={classNames(
-          "text-sm font-thin tracking-wider transition-all duration-300",
+          "text-md font-thin tracking-wider leading-none transition-all duration-300",
           { "mb-3": !clicked },
           { "mb-2": clicked },
           { "h-7": !clicked },
@@ -46,10 +46,13 @@ const Department: FC<Props> = ({ name, tags, desc, color }) => {
         <Magnifier />
       </p>
       <p
-        className={classNames("font-extralight whitespace-pre-line transition-all duration-300", {
-          "opacity-0": !clicked,
-          "opacity-1": clicked,
-        })}
+        className={classNames(
+          "text-lg font-light whitespace-pre-line transition-all duration-300",
+          {
+            "opacity-0": !clicked,
+            "opacity-1": clicked,
+          },
+        )}
       >
         {desc}
       </p>

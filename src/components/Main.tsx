@@ -141,7 +141,7 @@ const Main: FC = () => {
         </div>
 
         {/* toggle component with hide className */}
-        <div className="flex justify-center gap-4 mt-12">
+        <div className="flex justify-center gap-2 mt-12">
           {colors.map(color => (
             <div className={`w-4 h-4 bg-${color}-800`} />
           ))}
