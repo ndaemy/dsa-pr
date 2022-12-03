@@ -13,7 +13,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      default: ["Pretendard", "sans-serif"],
+      default: ["Pretendard", "Tossface", "sans-serif"],
     },
 	},
 	plugins: [],
