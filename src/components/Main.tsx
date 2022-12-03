@@ -99,6 +99,26 @@ const departments: Department[] = [
   },
 ];
 
+const colors = [
+  "red",
+  "orange",
+  "amber",
+  "yellow",
+  "lime",
+  "green",
+  "emerald",
+  "teal",
+  "cyan",
+  "sky",
+  "blue",
+  "indigo",
+  "violet",
+  "purple",
+  "fuchsia",
+  "pink",
+  "rose",
+];
+
 const Main: FC = () => {
   const [suffledList, setSuffledList] = useState<Department[]>([]);
 
@@ -120,8 +140,15 @@ const Main: FC = () => {
           ))}
         </div>
 
+        {/* toggle component with hide className */}
+        <div className="flex justify-center gap-4 mt-12">
+          {colors.map(color => (
+            <div className={`w-4 h-4 bg-${color}-800`} />
+          ))}
+        </div>
+
         {/* tailwind build bug fix */}
-        <div className="hidden bg-lime-800 bg-emerald-800 bg-cyan-800 bg-blue-800 bg-violet-800 bg-fuchsia-800 bg-pink-800"></div>
+        <div className="hidden bg-red-800 bg-orange-800 bg-amber-800 bg-yellow-800 bg-lime-800 bg-green-800 bg-emerald-800 bg-teal-800 bg-cyan-800 bg-sky-800 bg-blue-800 bg-indigo-800 bg-violet-800 bg-purple-800 bg-fuchsia-800 bg-pink-800 bg-rose-800" />
       </div>
     </div>
   );
