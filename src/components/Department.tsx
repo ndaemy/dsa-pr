@@ -17,10 +17,9 @@ const Department: FC<Props> = ({ name, tags, desc, color }) => {
 
   return (
     <div
-      className={classNames(
-        `relative ${colorName} p-6 rounded-lg w-full h-48 md:h-128 lg:h-116 cursor-pointer`,
-        { "h-fit": clicked },
-      )}
+      className={classNames(`relative ${colorName} p-6 rounded-lg w-full h-48 cursor-pointer`, {
+        "h-fit": clicked,
+      })}
       onClick={toggleClick}
     >
       <p

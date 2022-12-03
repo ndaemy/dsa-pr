@@ -108,13 +108,13 @@ const Main: FC = () => {
 
   return (
     <div className="flex place-content-center">
-      <div className="w-full max-w-4xl px-4 md:px-8 py-24">
+      <div className="w-full max-w-2xl px-4 py-24">
         <h1 className="text-4xl text-center font-bold leading-relaxed mb-3">고등부 학생처</h1>
         <h3 className="text-lg text-center text-neutral-400 font-normal leading-normal mb-12">
           고등부 학생처는 7개 부서로 이루어져 있습니다.
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 gap-6">
           {suffledList.map(({ name, tags, desc, color }) => (
             <Department key={name} name={name} tags={tags} desc={desc} color={color} />
           ))}
