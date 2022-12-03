@@ -13,52 +13,45 @@ const Department: FC<Props> = ({ name, tags, desc, color }) => {
 
   const toggleClick = () => {
     setClicked(prev => !prev);
-  }
+  };
 
   return (
     <div
-      className={
-        classNames(
-    `relative ${colorName} p-6 rounded-lg w-full h-48 md:h-128 lg:h-116 cursor-pointer`,
-          { "h-fit": clicked },
-        )
-      }
+      className={classNames(
+        `relative ${colorName} p-6 rounded-lg w-full h-48 md:h-128 lg:h-116 cursor-pointer`,
+        { "h-fit": clicked },
+      )}
       onClick={toggleClick}
     >
       <p
-        className={
-          classNames(
-            "text-sm font-thin tracking-wider transition-all duration-300",
-            { "mb-3": !clicked },
-            { "mb-2": clicked },
-            { "h-7": !clicked },
-            { "h-0": clicked },
-            { "opacity-0": clicked },
-          )
-        }
+        className={classNames(
+          "text-sm font-thin tracking-wider transition-all duration-300",
+          { "mb-3": !clicked },
+          { "mb-2": clicked },
+          { "h-7": !clicked },
+          { "h-0": clicked },
+          { "opacity-0": clicked },
+        )}
       >
-        {tags.map(tag => <span key={tag} className="inline-block mr-1">{`#${tag}`}</span>)}
+        {tags.map(tag => (
+          <span key={tag} className="inline-block mr-1">{`#${tag}`}</span>
+        ))}
       </p>
       <p className="text-2xl font-bold mb-5">{name}</p>
       <p
-        className={
-          classNames(
-            "absolute right-8 bottom-8 transition-all duration-300",
-            {
-              "opacity-0": clicked,
-              "opacity-1": !clicked
-            }
-          )
-        }
+        className={classNames("absolute right-8 bottom-8 transition-all duration-300", {
+          "opacity-0": clicked,
+          "opacity-1": !clicked,
+        })}
       >
         <Magnifier />
       </p>
-      <p className={
-        classNames(
-          "font-extralight whitespace-pre-line transition-all duration-300",
-          { "opacity-0": !clicked, "opacity-1": clicked }
-        )
-      }>
+      <p
+        className={classNames("font-extralight whitespace-pre-line transition-all duration-300", {
+          "opacity-0": !clicked,
+          "opacity-1": clicked,
+        })}
+      >
         {desc}
       </p>
     </div>
