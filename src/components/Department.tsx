@@ -3,6 +3,7 @@ import { type FC, useState } from "react";
 
 import Magnifier from "../icons/Magnifier";
 import type { Department as TDepartment } from "./Main";
+import { event } from "../lib/gtag";
 
 type Props = TDepartment;
 
@@ -12,6 +13,11 @@ const Department: FC<Props> = ({ name, tags, desc, color }) => {
   const colorName = `bg-${color}-800`;
 
   const toggleClick = () => {
+    if (!clicked) {
+      window.gtag("event", "click", {
+        event_category: name,
+      });
+    }
     setClicked(prev => !prev);
   };
 
