@@ -13,11 +13,6 @@ const Department: FC<Props> = ({ name, tags, desc, color }) => {
   const colorName = `bg-${color}-800`;
 
   const toggleClick = () => {
-    if (!clicked) {
-      window.gtag("event", "click", {
-        event_category: name,
-      });
-    }
     setClicked(prev => !prev);
   };
 
