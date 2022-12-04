@@ -3,7 +3,7 @@ import { type FC, useState } from "react";
 
 import Magnifier from "../icons/Magnifier";
 import type { Department as TDepartment } from "./Main";
-import { event } from "../lib/gtag";
+import sorinoeul from "../images/sorinoeul.png";
 
 type Props = TDepartment;
 
@@ -55,7 +55,20 @@ const Department: FC<Props> = ({ name, tags, desc, color }) => {
           },
         )}
       >
+        {name === "소리노을" && <img src={sorinoeul} alt="소리노을 이미지" />}
         {desc}
+        {name === "소리노을" && (
+          <>
+            <br />
+            <br />
+            <a
+              href="/sorinoeul.hwp"
+              className="text-white cursor-pointer px-3 py-2 bg-cyan-900 rounded-md"
+            >
+              소리노을 원서 다운로드
+            </a>
+          </>
+        )}
       </p>
     </div>
   );
