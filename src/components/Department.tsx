@@ -6,25 +6,31 @@ import type { Department as TDepartment } from "./Main";
 import sorinoeul from "../images/sorinoeul.png";
 
 type Props = TDepartment & {
-  isOpenable?: boolean;
+  isNotOpenable?: boolean;
 };
 
-const Department: FC<Props> = ({ name, tags, desc, color, isOpenable }) => {
-  const [clicked, setClicked] = useState(isOpenable ?? false);
+const Department: FC<Props> = ({ name, tags, desc, color, isNotOpenable }) => {
+  const [clicked, setClicked] = useState(isNotOpenable ?? false);
 
   const colorName = `bg-${color}-800`;
 
   const toggleClick = () => {
-    if (!isOpenable) {
+    if (!isNotOpenable) {
       setClicked(prev => !prev);
     }
   };
 
   return (
     <div
-      className={classNames(`relative ${colorName} p-6 rounded-lg w-full h-48 cursor-pointer`, {
-        "h-fit": clicked,
-      })}
+      className={classNames(
+        `relative ${colorName} p-6 rounded-lg w-full h-48`,
+        {
+          "h-fit": clicked,
+        },
+        {
+          "cursor-pointer": !isNotOpenable,
+        },
+      )}
       onClick={toggleClick}
     >
       <p

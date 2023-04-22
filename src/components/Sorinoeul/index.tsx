@@ -14,7 +14,7 @@ export const Sorinoeul = () => {
           tags={sorinoeul.tags}
           desc={sorinoeul.desc}
           color={sorinoeul.color}
-          isOpenable
+          isNotOpenable
         />
       </div>
     </div>
