@@ -10,7 +10,7 @@ export type Department = {
   color: string;
 };
 
-const departments: Department[] = [
+export const departments: Department[] = [
   {
     name: "학생회",
     tags: ["예배총괄", "큐시트제작", "행사기획"],

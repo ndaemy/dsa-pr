@@ -5,15 +5,19 @@ import Magnifier from "../icons/Magnifier";
 import type { Department as TDepartment } from "./Main";
 import sorinoeul from "../images/sorinoeul.png";
 
-type Props = TDepartment;
+type Props = TDepartment & {
+  isOpenable?: boolean;
+};
 
-const Department: FC<Props> = ({ name, tags, desc, color }) => {
-  const [clicked, setClicked] = useState(false);
+const Department: FC<Props> = ({ name, tags, desc, color, isOpenable }) => {
+  const [clicked, setClicked] = useState(isOpenable ?? false);
 
   const colorName = `bg-${color}-800`;
 
   const toggleClick = () => {
-    setClicked(prev => !prev);
+    if (!isOpenable) {
+      setClicked(prev => !prev);
+    }
   };
 
   return (
