@@ -8,7 +8,6 @@ export const Sorinoeul = () => {
   return (
     <div className="flex flex-col items-center p-6">
       <div className="max-w-3xl grid grid-cols-1 gap-6">
-        <Video />
         <Department
           name={sorinoeul.name}
           tags={sorinoeul.tags}
@@ -16,6 +15,7 @@ export const Sorinoeul = () => {
           color={sorinoeul.color}
           isNotOpenable
         />
+        <Video />
       </div>
     </div>
   );
