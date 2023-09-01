@@ -72,7 +72,7 @@ const Department: FC<Props> = ({ name, tags, desc, color, isNotOpenable }) => {
             <br />
             <br />
             <a
-              href="/sorinoeul.hwp"
+              href="/2023소리노을원서-20230829.hwpx"
               className="text-white cursor-pointer px-3 py-2 bg-cyan-900 rounded-md"
             >
               소리노을 원서 다운로드
